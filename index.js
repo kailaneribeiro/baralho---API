@@ -26,3 +26,14 @@ app.delete('/baralho/:id', deletarBaralho);
 
 const criarFlashcards = require('./flashcards/criarFlashcards');
 app.post('/flashcards', criarFlashcards);
+
+
+const listarFlashcards  = require('./flashcards/listarFlashcards');
+app.get('/flashcards', listarFlashcards );
+
+const atualizarflashcard = require ('./flashcards/atualizarFlashcards');
+app.put('/flashcards/:id', atualizarflashcard)
+
+const deletarFlashcards = require ('./flashcards/deletarFlashcards');
+app.delete('/flashcards/:id', deletarFlashcards);
+
