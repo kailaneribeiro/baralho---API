@@ -3,7 +3,7 @@ const atualizarflashcard = (req, res) =>{
     const {id} = req.params;
     const novaPergunta = req.body.pergunta;
     const novaResposta = req.body.resposta;
-    const novoBara = req.body.baralhoId;
+    const novoBara = req.params;
 
 
 
@@ -14,7 +14,6 @@ const atualizarflashcard = (req, res) =>{
     }
     flashcard.pergunta = novaPergunta;
     flashcard.resposta = novaResposta;
-    flashcard.baralhoId = novoBara;
 
     res.status(200).send({ mensagem: 'Flashcard atualizado com sucesso!',
         flashcard: flashcard

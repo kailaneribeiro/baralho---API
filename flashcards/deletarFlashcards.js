@@ -2,6 +2,7 @@ const {flashcards} = require('../data')
 
 const deletarFlashcards = (req, res) =>{
     const {id} = req.params;
+    const {baralhoId} = req.params
     const index = flashcards.findIndex((fla)=> fla.id == id);
 
     if (index === -1){
